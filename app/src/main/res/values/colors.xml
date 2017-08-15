@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_gray_bg">#F7F7F7</color>
+
+    <color name="main_orange">#F8b921</color>
+
+    <color name="study_area_bg">#213855</color>
+
+    <color name="fun_area_bg">#213855</color>
+
+    <color name="record_area_bg">#213855</color>
+
+    <color name="message_area_bg">#213855</color>
+
+    <color name="task_area_bg">#213855</color>
+    <color name="task_area_border">#4373af</color>
+    <color name="task_area_panel">#142842</color>
+
+    <color name="study_divider">#2C5366</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="transparent">#00f3f3f3</color>
+    <color name="select_able_item">#30ffffff</color>
+</resources>

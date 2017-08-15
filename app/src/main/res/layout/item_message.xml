@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root"
+              android:layout_width="match_parent"
+              android:layout_height="44dp"
+              android:background="@drawable/click_able_item"
+              android:gravity="left|center"
+              android:orientation="horizontal">
+
+    <View
+        android:id="@+id/read_dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/message_dot_readed"/>
+
+    <TextView
+        android:id="@+id/message_title"
+        style="@style/message_title"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:text="学习专区推出新产品啦！"/>
+
+    <TextView
+        android:id="@+id/message_time"
+        style="@style/message_time"
+        android:layout_marginRight="12dp"
+        android:text="11月11日"/>
+</LinearLayout>

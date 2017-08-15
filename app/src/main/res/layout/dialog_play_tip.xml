@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="220dp">
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="209dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/ic_pop"/>
+        <View
+            android:background="@drawable/play_video_pop_bg"
+            android:layout_gravity="center|bottom"
+            android:layout_width="282dp"
+            android:layout_height="209dp"/>
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/close"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_delete"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/content"
+                android:layout_marginTop="9dp"
+                android:text="你可以免费观看前3分钟"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="如需完整观看"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="#41C485"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_arrow"
+                android:scaleType="centerCrop"
+                android:layout_width="17dp"
+                android:layout_height="20dp"/>
+            <TextView
+                android:id="@+id/wish"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/btn_play_video_pop_wish"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="立即许愿"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.1" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.xiaoshujing.kid">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme">
+        </activity>
+        <activity
+            android:name=".ui.seasonList.SeasonListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.videoList.VideoListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+
+        <activity
+            android:name=".ui.mission.MissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.score.ScoreActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.scoreFromAlbum.ScoreFromAlbumActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.fun.FunActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.record.RecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <!--<activity-->
+            <!--android:name=".ui.playVideo.PlayVideoActivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/HomeTheme"></activity>-->
+        <activity
+            android:name=".ui.playVideoView.PlayVideoViewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.playVideoFFMpeg.PlayVideoFFMpegActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/HomeTheme"></activity>
+
+
+        <activity
+            android:name=".ui.message.MessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.start.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.photoSuccess.PhotoSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.photoUpload.PhotoUploadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.scanQRcode.ScanQRCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.missionDetail.MissionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".ui.makeWish.MakeWishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"></activity>
+
+
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity"/>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58577faf734be4649f00151d">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="dd44782b65cd5681d220b46d4b5f69d4">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="official">
+        </meta-data>
+
+        <service
+            android:name="com.inuker.bluetooth.library.BluetoothService" />
+
+    </application>
+
+</manifest>

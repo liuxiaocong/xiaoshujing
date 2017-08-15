@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/image_view_bg"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="35dp"
+            fresco:roundedCornerRadius="5dp"
+            android:scaleType="centerCrop"
+            fresco:actualImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/placeholder"
+            fresco:placeholderImageScaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:clickable="true"
+            android:src="@drawable/ic_delete"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/last"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:background="@drawable/btn_play_video_pop_wish"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="上一张"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/next"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/btn_play_video_pop_wish"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="下一张"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

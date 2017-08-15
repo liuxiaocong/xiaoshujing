@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_view_moive_page"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/main_orange">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_back"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:gravity="right|center">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_energy_home"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="28dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_number_energy"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1136">
+
+        <FrameLayout
+            android:id="@+id/video_area"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="650">
+
+            <FrameLayout
+                android:id="@+id/video_content"
+                android:layout_width="match_parent"
+                android:layout_height="216dp"
+                android:orientation="vertical">
+
+                <SurfaceView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Hello World!"/>
+
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_image_bg"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    />
+
+                <ImageView
+                    android:id="@+id/play_icon"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:src="@drawable/ic_view"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/video_mask"
+                android:layout_width="match_parent"
+                android:layout_height="216dp"
+                android:orientation="vertical">
+
+                <com.xiaoshujing.kid.widget.radiusMask
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/play_border_mask_bg"/>
+            </FrameLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="590"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/play_video_title"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="50dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="看书写字正确姿势"/>
+
+            <TextView
+                android:id="@+id/des"
+                style="@style/play_video_des"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="该频道虽然没有简介，但内容说不定特别精 彩噢～"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
